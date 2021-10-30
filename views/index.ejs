@@ -27,15 +27,15 @@
         </div>
 
         <% for(var tasks of data){ %>
-        <form action="/delete" method="POST">
-            <p><%= tasks.task %></p>
+        <form action="/delete"  method="POST">
+            <h4><%= tasks.task %></h4>
             <input type="hidden" name="id" value="<%= tasks._id %>">
             <% if(tasks.status) { %>
             
             <% } else { %>
-                <button type="submit" formaction="/update">Completed</button>
+                <button type="submit" class="btn btn-m btn-success"  formaction="/update">Completed</button>
               <% } %>
-              <button type="submit">Delete</button>
+              <button type="submit" class="btn btn-m btn-danger">Delete</button> <br/>
         </form>
         <% } %>
 
